@@ -6,7 +6,8 @@ const [nama,setnama] = useState('');
 const [umur,setumur] = useState('');
 const save =()=>{
     setnama('');
-    setumur('')
+    setumur('');
+    navigation.goBack()
 }
   return (
     <View style={{
@@ -29,6 +30,7 @@ const save =()=>{
             value={nama}
             style={{width:'100%',borderWidth:1,height:50,fontSize:15,marginTop:40}}/>
             <TextInput 
+            keyboardType={'number-pad'}
             placeholder="Umur barang dalam bulan"
             onChangeText={teks => setumur(teks)}
             value={umur}
